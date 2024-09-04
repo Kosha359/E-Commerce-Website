@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eira</title>
+    
+
+    <!-- 
+      - favicon
+    -->
+    <link rel="shortcut icon" href="Original-Image\logo_300.png" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- 
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  
+    <!-- 
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+  
+    <!-- 
+      - preload banner
+    -->
+    <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+  
+    <style>
+        body{
+            text-align: justify;
+            text-transform:none;
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+        }
+
+        p{
+            text-align: justify;
+            line-height: 1.6;
+            color: black;
+            display:contents;
+            justify-content: center;
+            align-items:center;
+            
+        }
+
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
+          padding-top: 100px;
+        }
+
+      .about{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            box-shadow: 50px rgba(18, 18, 18, 0.1);
+            /* height: fit-content;
+            padding-left: 300px;
+            padding-top: 50px;
+            padding-right: 300px; */
+           
+        }
+
+    
+.image-slider {
+  position: relative;
+ margin-left: 300px;
+  width: 800px; /* adjust width to fit your needs */
+  height: 600px; /* adjust height to fit your needs */
+}
+
+.image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-slide.active {
+  display: block;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.next-button {
+  right: 0;
+  width: 50px;
+  height: 50px;
+}
+    </style>
+</head>
+<body id="top">
+
+    
+  <!--  #HEADER -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="Original-Image\logo_300.png" width="160" height="100" alt="Eira logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <!-- <a href="#" class="logo">
+          <img src="Original-Image\logo_300.png" width="190" height="50" alt="Footcap logo">
+        </a> -->
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="IndianWear.html" class="navbar-link">Clothing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Jewelry.html" class="navbar-link">Accessories</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul> -->
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ////////////////////////ABOUT US //////////////////////// -->
+   <br>
+    <h1>ABOUT US</h1>
+    <div class="about">
+    <p>Welcome to Eira, your premier one-stop destination for the latest trends in women’s jewelry and clothing. At Eira, we believe that every woman deserves to express her unique style with confidence</p>
+    <p>and elegance. Our mission is to provide you with a carefully curated collection of jewelry and clothing that not only enhances your beauty but also resonates with your individuality. Whether </p>
+    <p>You're dressing up for a special occasion, looking to make a statement, or simply updating your everyday wardrobe, Eira has something for every style and every moment.</p>
+
+<br><br><br>
+            <!-- Image Slider Container -->
+<div class="image-slider">
+    <!-- Image 1 -->
+    <div class="image-slide">
+      <img src="Original-Image\product-1.png" alt="Image 1">
+    </div>
+    <!-- Image 2 -->
+    <div class="image-slide">
+      <img src="Original-Image\product-2.png" alt="Image 2">
+    </div>
+    <!-- Image 3 -->
+    <div class="image-slide">
+      <img src="Original-Image\product-12.png" alt="Image 3">
+    </div>
+    <!-- Image 4 -->
+    <div class="image-slide">
+        <img src="Original-Image\product-11.png" alt="Image 4">
+    </div>
+    <!-- Image 5 -->
+    <div class="image-slide">
+        <img src="Original-Image\product-27.png" alt="Image 5">
+    </div>
+    <!-- Image 6 -->
+    <div class="image-slide">
+        <img src="Original-Image\product-24.png" alt="Image 6">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev-button">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <button class="next-button">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <script>
+    // Get elements
+const imageSlider = document.querySelector('.image-slider');
+const imageSlides = document.querySelectorAll('.image-slide');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+// Set initial active slide
+let activeSlideIndex = 0;
+imageSlides[activeSlideIndex].classList.add('active');
+
+// Navigation button event listeners
+prevButton.addEventListener('click', () => {
+  // Decrement active slide index
+  activeSlideIndex--;
+  // Check if we're at the first slide
+  if (activeSlideIndex < 0) {
+    activeSlideIndex = imageSlides.length - 1;
+  }
+  // Update active slide
+  updateActiveSlide();
+});
+
+nextButton.addEventListener('click', () => {
+  // Increment active slide index
+  activeSlideIndex++;
+  // Check if we're at the last slide
+  if (activeSlideIndex >= imageSlides.length) {
+    activeSlideIndex = 0;
+  }
+  // Update active slide
+  updateActiveSlide();
+});
+
+// Update active slide function
+function updateActiveSlide() {
+  // Remove active class from all slides
+  imageSlides.forEach((slide) => slide.classList.remove('active'));
+  // Add active class to current slide
+  imageSlides[activeSlideIndex].classList.add('active');
+}
+  </script>
+
+    <br><br><br>
+        <p>Our extensive range of women's jewelry includes everything from delicate pieces that add a touch of sophistication to your daily look, to bold statement accessories that make you stand out </p>
+        <p>in any crowd. Explore our collections of earrings, necklaces, bracelets, rings, and more, crafted from high-quality materials that are designed to shine as brightly as you do. </p>
+        <p>Each piece is thoughtfully selected to reflect the latest trends while maintaining timeless appeal, ensuring that you find something that fits perfectly with your personal style.</p>
+        <br><br>
+        <p>But Eira is more than just jewelry. Our clothing collection is designed to cater to the diverse and dynamic tastes of modern women. Whether you’re seeking a chic dress for a night out, </p>
+        <p>comfortable yet stylish workwear, or casual pieces that exude effortless charm, our clothing line is here to inspire. We offer a wide variety of styles, sizes, and colors, all crafted with </p>
+        <p>highest attention to detail and quality. At Eira, we believe that fashion should be accessible to all, which is why we focus on providing affordable options without compromising </p>
+        <p>on style or quality.</p>
+        <br><br>
+        <p>What sets Eira apart is our commitment to an enjoyable shopping experience. We understand that finding the right pieces can sometimes be overwhelming, which is why we strive to make the</p>
+        <p>process as seamless as possible. Our easy-to-navigate website allows you to browse our collections with ease, and our dedicated customer service team is always on hand to assist you with any</p> 
+        <p>questions or style advice you might need. Plus, with fast shipping and hassle-free returns, you can shop with confidence, knowing that your satisfaction is our top priority.</p>
+        <br><br>
+        <p>At Eira, we’re more than just a store—we’re a community of fashion enthusiasts who celebrate the power of self-expression through style. Join us and discover a world of possibilities where </p>
+        <p>every piece of jewelry and every outfit is an opportunity to tell your story. Embrace the elegance, embrace the trends, and most importantly, embrace yourself with Eira—where fashion</p>
+        <p>meets empowerment, and every woman finds her perfect match.</p>
+
+    </div>
+
+</body>
+</html>

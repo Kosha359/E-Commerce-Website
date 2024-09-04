@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eira-Website</title>
+  
+     <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="Original-Image\logo_300.png" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload banner
+  -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .container_login {
+      display: flex;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 800px;
+    }
+
+    .section {
+      width: 50%;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <!--  #HEADER -->
+
+    <header class="header" data-header>
+      <div class="container">
+  
+        <div class="overlay" data-overlay></div>
+  
+        <a href="#" class="logo">
+          <img src="Original-Image\logo_300.png" width="160" height="100" alt="Eira logo">
+        </a>
+  
+        <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+  
+        <nav class="navbar" data-navbar>
+  
+          <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+  
+          <!-- <a href="#" class="logo">
+            <img src="Original-Image\logo_300.png" width="190" height="50" alt="Footcap logo">
+          </a> -->
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link">Home</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="about.html" class="navbar-link">About</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="IndianWear.html" class="navbar-link">Clothing</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="Jewelry.html" class="navbar-link">Accessories</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link">Contact Us</a>
+            </li>
+  
+          </ul>
+  
+          <!-- <ul class="nav-action-list">
+  
+            <li>
+              <button class="nav-action-btn">
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+  
+                <span class="nav-action-text">Search</span>
+              </button>
+            </li>
+  
+            <li>
+              <a href="#" class="nav-action-btn">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+  
+                <span class="nav-action-text">Login / Register</span>
+              </a>
+            </li>
+  
+            <li>
+              <button class="nav-action-btn">
+                <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+  
+                <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+  
+                <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+              </button>
+            </li>
+  
+          </ul> -->
+  
+        </nav>
+  
+      </div>
+    </header>
+
+    
+  <div class="container_login">
+    <div class="section">
+      <h2>LOGIN / REGISTER</h2>
+      <p>If you have an account with us, please log in.</p>
+      <input type="text" placeholder="Email" id="email">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="handleSignIn()">SIGN IN</button>
+      <!-- <div class="forgot-password">
+        <a href="#">Forgot your password?</a>
+      </div> -->
+    </div>
+    <div class="section">
+      <h2>NEW USER?</h2>
+      <p>Registering for this site allows you to access your order status and history. We'll get a new account set up for you in no time.</p>
+      <button>
+        <a href="createaccount.html">CREATE AN ACCOUNT
+
+        </a>
+      </button>
+    </div>
+  </div>
+  <script>
+  
+      // Add your sign-in logic here
+     
+      function handleSignIn() {
+  // Get the email and password from the input fields
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Validate the email and password
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
+
+  // Send the login request to the server
+  fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then((response) => {
+      if (response.ok) {
+        // Handle successful login
+        return response.json();
+      } else {
+        // Handle login error
+        throw new Error("Invalid email or password.");
+      }
+    })
+    .then((data) => {
+      // Store the authentication token in local storage
+      localStorage.setItem("token", data.token);
+
+      // Redirect to the home page
+      window.location.href = "/";
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+}
+
+function validateEmail(email) {
+  // Basic email validation
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+  
+  </script>
+
+</body>
+</html>
