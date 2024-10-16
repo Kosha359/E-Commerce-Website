@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eira-Website</title>
+
+     <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="Original-Image\logo_300.png" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload banner
+  -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display:block;
+            justify-content: center;
+            align-items:center;
+            min-height: 10vh;
+            background-color: #f4f4f4;
+        }
+
+        .container_account {
+            background-color: #fff;
+            margin-left: 700px;
+            margin-top: 100px;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="address"]{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+     <!--  #HEADER -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="Original-Image\logo_300.png" width="160" height="100" alt="Eira logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <!-- <a href="#" class="logo">
+          <img src="Original-Image\logo_300.png" width="190" height="50" alt="Footcap logo">
+        </a> -->
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="IndianWear.html" class="navbar-link">Clothing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Jewelry.html" class="navbar-link">Accessories</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul> -->
+
+      </nav>
+
+    </div>
+  </header>
+
+    <main>
+    <div class="container_account">
+        <h2>Create an Account</h2>
+        <form id="registrationForm" action="/add" method="post">
+            <label for="firstName" >First Name</label>
+            <input type="text" id="firstName" name="firstName"  placeholder="Your First Name" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName"  placeholder="Your last Name" required>
+
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Contact Number">
+
+            <label for="address">Address</label>
+            <textarea type="address" id="address" name="address" placeholder="Optional" rows="4" cols="10"></textarea>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"  placeholder="Email ID" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" id="submit-btn">SUBMIT</button>
+            <!-- <button type="button" onclick="registerAccount()">Register</button> -->
+        </form>
+    </div>
+
+    <script src="assets\js\temp.js"></script>  <!-- This should only include client-side code -->
+    <script>
+      
+        const registrationForm = document.getElementById('registrationForm');
+        // const submitBtn = document.getElementById('submit-btn');
+
+        registrationForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent page reload
+
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                contactNumber: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+            };
+
+            // Validate form data (you can add more validation rules)
+            if (Object.values(formData).some(value => value.trim() === '')) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!validateEmail(formData.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (formData.password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+                return;
+            }
+
+  
+
+            // Validate form data (you can add more validation rules)
+            // if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || password.trim() === '' || contactNumber.trim() === '' || address.trim() === '' ) {
+            //     alert('Please fill in all fields.');
+            //     return;
+           
+            // Additional validation for email and password
+           // if (!validateEmail(email)) {
+           //     errorMessage.textContent = 'Please enter a valid email address.';
+           //     return;
+          //   }
+
+          //   if (password.length < 8) {
+          //     errorMessage.textContent = 'Password must be at least 8 characters long.';
+         //     return;
+         //   }  
+ 
+
+           // Create a new object to store the form data
+            //      const formData = { 
+            //       firstName,
+            //       lastName,
+            //       contactNumber,
+            //       address,
+            //       email,
+            //       password
+            // };
+
+            // If validation passes, you can submit the form to your backend
+           // You can use AJAX or a different method to send the data
+          // ...
+         // Submit form data (replace this with your actual submission logic)
+        
+        
+    // Send the form data to a server using fetch API
+    fetch('http://127.0.0.1:3000/add',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Form submitted successfully:', data);
+      alert('Account created successfully!');
+      window.location.href = 'login.html';
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+    });
+  });
+
+//   } else {
+//     console.log('Please fill in all fields.');
+//   }
+
+//     console.log('Form data:', { firstName, lastName, contactNumber, address, email, password });
+//     alert('Account created successfully!');
+// });
+
+// console.log('Form submitted successfully:', data);
+//         // Display success message to the user
+//         successMessage.textContent = 'Account created successfully!';
+//       })
+//       .catch((error) => {
+//         console.error('Error submitting form:', error);
+//       });
+
+        // Function to validate email address
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+    // // Function to validate email address
+    // function validateEmail(email) {
+    //   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //   return re.test(String(email).toLowerCase());
+    // }
+
+    </script>
+    </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  3
+  <footer class="footer">
+  
+    <div class="footer-top section">
+      <div class="container">
+  
+        <div class="footer-brand">
+  
+          <a href="#" class="logo">
+            <img src="Original-Image\logo_300.png" width="160" height="100" alt="Footcap logo">
+          </a>
+        </div>
+  
+        <div class="footer-link-box">
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+  
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+  
+                <span class="footer-link-text">
+                  D-183, 2nd floor, Arora Complex , Ahmedabad , Gujarat, India.
+                </span>
+              </address>
+            </li>
+  
+            <li>
+              <a href="tel:+557343673257" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+  
+                <span class="footer-link-text">+91 9913030534</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="mailto:footcap@help.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+  
+                <span class="footer-link-text">eira@help.com</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">My Account</p>
+            </li>
+  
+            <li>
+              <a href="my_account.html" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+  
+                <span class="footer-link-text">My Account</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="cart.html" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+  
+                <span class="footer-link-text">View Cart</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="IndianWear.html" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+  
+                <span class="footer-link-text">
+                  Clothes
+                </span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="Jewelry.html" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+  
+                <span class="footer-link-text">Jewelry</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <div class="footer-list">
+  
+            <p class="footer-list-title">Opening Time</p>
+  
+            <table class="footer-table">
+              <tbody>
+  
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+  
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+  
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+  
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+  
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+  
+                  <td class="table-data">Closed</td>
+                </tr>
+  
+              </tbody>
+            </table>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="container">
+  
+        <p class="copyright">
+          &copy; 2024 <a href="index.html" class="copyright-link">Eira-Website</a>
+        </p>
+  
+      </div>
+    </div>
+  
+  </footer>
+  
+  
+  
+  
+  
+  <!-- 
+    - #GO TO TOP
+  -->
+  
+  <a href="#top" class="go-top-btn" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+  
+</body>
+</html>

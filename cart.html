@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Product Details</title>
+ <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="Original-Image\logo_300.png" type="image/svg+xml">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload banner
+  -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header {
+            background-color: rgb(70, 33, 130);
+            color: rgb(211, 173, 213);
+            padding: 10px 0;
+            text-align: center;
+        }
+        .back-button {
+            margin-bottom: 20px;
+        }
+        .back {
+            width: 50px;
+            height: 50px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/93/93634.png');
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .product-details img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .product-details div {
+            max-width: 400px;
+        }
+        .quantity {
+            margin: 10px 0;
+        }
+        .quantity input {
+            width: 50px;
+            text-align: center;
+        }
+        .total-price {
+            margin-top: 20px;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .cart-summary button {
+            background-color: rgb(70, 33, 130);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart-summary button:hover {
+            background-color: rgb(50, 25, 100);
+        }
+        .remove-button {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .remove-button:hover {
+            background-color: rgb(200, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    
+  <!--  #HEADER -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="Original-Image\logo_300.png" width="160" height="100" alt="Eira logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <!-- <a href="#" class="logo">
+          <img src="Original-Image\logo_300.png" width="190" height="50" alt="Footcap logo">
+        </a> -->
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="IndianWear.html" class="navbar-link">Clothing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Jewelry.html" class="navbar-link">Accessories</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul> -->
+
+      </nav>
+
+    </div>
+  </header>
+<br><br><br><br><br><br><br><br><br><br>
+
+        <h1 style="text-align: center;">Shopping Cart</h1>
+   <br>
+   <div class="back-button">
+    <button class="back" onclick="window.location.href='index.html'"></button>
+</div>
+
+<div class="container" id="cart-container">
+    <!-- Product details will be inserted here by JavaScript -->
+</div>
+
+    <div class="cart-summary">
+        <p>Total Price: Rs. <span id="total-price">0.00</span></p>
+            
+        <!-- Example of the Proceed to Payment button -->
+<form id="paymentForm" action="http://localhost:3000/payment" method="GET">
+  <input type="hidden" name="totalAmount" id="totalAmount" value="" />
+  <button type="submit">Proceed to Payment</button>
+</form>
+        <!-- <button onclick="proceedToPayment()">Proceed to Payment</button> -->
+        <!-- <button onclick="logout()">Logout</button> -->
+        
+        <button id="logoutButton">Logout</button> <!-- Corrected the button with the proper id -->
+    </div>
+    </div>
+
+    <script>
+        // Function to retrieve products from localStorage
+        function getProductsFromLocalStorage() {
+            const products = localStorage.getItem('cartProducts');
+            if (products) {
+                try {
+                    return JSON.parse(products);
+                } catch (e) {
+                    console.error('Error parsing products from localStorage:', e);
+                }
+            }
+            return [];
+        }
+
+      // Function to fetch cart products from the server
+      // async function fetchCartProducts() {
+      //     try {
+      //         const response = await fetch('/api/cart'); // API endpoint to get cart products
+      //         const products = await response.json();
+      //         return products;
+      //     } catch (error) {
+      //         console.error('Error fetching cart products:', error);
+      //         return [];
+      //     }
+      // }   
+
+  
+        // Function to display products and calculate total price
+        function displayProducts() {
+            const products = getProductsFromLocalStorage();
+            const container = document.getElementById('cart-container');
+            let total = 0;
+
+            container.innerHTML = ''; // Clear previous content
+
+            products.forEach((product, index) => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'product-details';
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div>
+                        <h2>${product.name}</h2>
+                        <p>Price: Rs. <span class="product-price">${product.price.toFixed(2)}</span></p>
+                        <div class="quantity">
+                            <label for="quantity-${index}">Quantity:</label>
+                            <input type="number" id="quantity-${index}" value="${product.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                        </div>
+                        <p>Subtotal: Rs. <span class="product-subtotal">${(product.price * product.quantity).toFixed(2)}</span></p>
+                        <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+                container.appendChild(productDiv);
+                total += product.price * product.quantity;
+            });
+
+            document.getElementById('total-price').textContent = total.toFixed(2);
+        
+         // Set the total amount in the hidden input field
+         document.getElementById("totalAmount").value = total.toFixed(2);
+        }
+       // Set up the DOMContentLoaded event to display products
+        document.addEventListener("DOMContentLoaded", displayProducts); 
+
+        // Function to update the quantity of a product
+        function updateQuantity(index, newQuantity) {
+            const products = getProductsFromLocalStorage();
+            if (newQuantity <= 0) {
+                removeFromCart(index);
+                return;
+            }
+
+            products[index].quantity = parseInt(newQuantity, 10);
+            localStorage.setItem('cartProducts', JSON.stringify(products));
+            displayProducts();
+             // Update subtotal display after quantity change
+             const subtotalElement = document.querySelector(`.product-subtotal:nth-of-type(${index + 1})`);
+             subtotalElement.textContent = (products[index].price * products[index].quantity).toFixed(2);
+        }
+
+        // Function to remove a product from the cart
+        function removeFromCart(index) {
+            let products = getProductsFromLocalStorage();
+            products.splice(index, 1);
+            localStorage.setItem('cartProducts', JSON.stringify(products));
+            displayProducts();
+        }
+// 
+        // Function to create an order
+        async function createOrder() {
+            const products = getProductsFromLocalStorage();
+            const total = parseFloat(document.getElementById('total-price').textContent);
+
+            if (products.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+
+            const orderData = {
+                userId: localStorage.getItem('userId'), // Assume you store user ID in localStorage
+                products: products.map(product => ({
+                    id: product.id, // Ensure your product has an id field
+                    name: product.name,
+                    price: product.price,
+                    quantity: product.quantity
+                })),
+                totalAmount: total
+            };
+
+            try {
+                const response = await fetch('/api/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}` // Include auth token if necessary
+                    },
+                    body: JSON.stringify(orderData)
+                });
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Order created successfully!');
+                    // Clear cart after successful order
+                    localStorage.removeItem('cartProducts');
+                    localStorage.removeItem('totalPrice');
+                    window.location.href = 'index.html'; // Redirect to homepage
+                } else {
+                    alert(data.message || 'Failed to create order. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error creating order:', error);
+                alert('An error occurred while creating the order. Please try again.');
+            }
+        }
+
+
+        // // Function to proceed to the payment
+        // function proceedToPayment() {
+        //     const total = document.getElementById('total-price').textContent;
+        //     localStorage.setItem('totalPrice', total); // Store the total price in localStorage
+        //     window.location.href = 'payment.html'; // Redirect to the payment page
+        // }
+
+    // Function to log out and clear cart
+      // async function logout() {
+      //     try {
+      //         const response = await fetch('/logout', { method: 'POST' });
+      //         const data = await response.json();
+      //         if (data.success) {
+      //             window.location.href = 'index.html'; // Redirect to home or login page
+      //         } else {
+      //             alert('Logout failed. Please try again.');
+      //         }
+      //     } catch (error) {
+      //         console.error('Error during logout:', error);
+      //     }
+      // }
+
+
+
+
+      
+      //Check karna baki he 
+      // Logout function to clear cart and handle logout
+      // document.getElementById('logoutButton').addEventListener('click', function () {
+      //     // Clear local storage after logout
+      //     localStorage.removeItem('token');
+      //     localStorage.removeItem('userId');
+      //     localStorage.removeItem('cartProducts');
+      //     localStorage.removeItem('totalPrice');
+      //     window.location.href = 'index.html'; // Redirect to the home page
+      // });
+
+              // Logout function to clear cart and handle logout
+              document.getElementById('logoutButton').addEventListener('click', async function () {  // Added async keyword
+            const token = localStorage.getItem('token'); // Get the token from localStorage
+            if (token) {
+                try {
+                    const response = await fetch('/logout', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    const data = await response.json();
+                    if (data.success) {
+                        // Clear local storage after logout, including cart
+                        localStorage.removeItem('token');
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('cartProducts');
+                        localStorage.removeItem('totalPrice');
+
+                        window.location.href = 'index.html'; // Redirect to the login or home page
+                    } else {
+                        alert('Logout failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Error during logout:', error);
+                }
+            } else {
+                alert('You are not logged in!');
+                window.location.href = 'login.html'; // Redirect if not logged in
+            }
+        });
+        // Display products on page load
+        window.onload = displayProducts;
+    </script>
+</body>
+</html>
+

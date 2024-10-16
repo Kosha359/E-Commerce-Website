@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+
+    
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="Original-Image\logo_300.png" type="image/svg+xml">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload banner
+  -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+    <style>
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+.container_myaccount {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.profile-card {
+    background: #fff;
+    text-align: center;
+    height: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-card h2 {
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+    color: #666;
+}
+
+button {
+    background-color: #ff4c61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e04356;
+}
+
+.profile-editButton {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 800;
+    background-color: #FF3F6C;
+    margin: 30px 24px;
+    color: white;
+    border-radius: 2px;
+
+/* .logout {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 800;
+    background-color: #FF3F6C;
+    margin: 30px 24px;
+    color: white;
+    border-radius: 2px;
+} */
+}
+
+
+    </style>
+</head>
+<body>
+
+  <!--  #HEADER -->
+
+  <header class="header" data-header>
+    <div class="container_myaccount">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="Original-Image\logo_300.png" width="160" height="100" alt="Eira logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="IndianWear.html" class="navbar-link">Clothing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Jewelry.html" class="navbar-link">Accessories</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul> -->
+
+      </nav>
+
+    </div>
+  </header>
+
+
+<br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <div class="profile-card">
+            <h2>Profile Details</h2>
+    <div id="accountDetails">
+         
+    </div>
+
+    <div class="profile-editButton">
+         <a href="edit_profile.html"> 
+            <span>
+                EDIT
+            </span>
+          </a>
+    </div>  
+        <button id="logout" class="logout">Logout</button>
+    <!-- <br><br><br><br><br><br><br><br> -->
+    <button id="profile1" class="profile1">My Profile</button>
+
+  </div>
+</div>
+    
+    <script>
+      // Retrieve user ID and token from local storage
+        // const params = new URLSearchParams(window.location.search);
+        // const userId = params.get('id');
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+    
+        if (!userId || !token) {
+            alert('User ID is missing.');
+            window.location.href = 'login.html';
+        } else{
+        fetch(`http://127.0.0.1:3000/user/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+ 
+        // .then(response => response.json())
+        // .then(data => {
+        //     if (data.id) {
+        //         document.getElementById('accountDetails').innerHTML = `
+        //             <p>First Name: ${data.first_name}</p>
+        //             <p>Last Name: ${data.last_name}</p>
+        //             <p>Email: ${data.email}</p>
+        //             <p>Contact Number: ${data.contact_number}</p>
+        //             <p>Address: ${data.address}</p>
+        //         `;
+        //     } else {
+        //         throw new Error(data.error || "User not found.");
+        //     }
+        // })
+        // .catch(error => {
+        //     alert(error.message);
+        //     window.location.href = 'login.html';
+        // });
+
+        // NEW
+    .then(response => {
+    if (!response.ok) {
+      throw new Error('Unauthorized or session expired.');
+    }
+    return response.json();
+  })
+  .then(data => {
+    document.getElementById('accountDetails').innerHTML = `
+      <p>First Name: ${data.first_name}</p>
+      <p>Last Name: ${data.last_name}</p>
+      <p>Email: ${data.email}</p>
+      <p>Contact Number: ${data.contact_number}</p>
+      <p>Address: ${data.address}</p>
+    `;
+  })
+  .catch(error => {
+    alert(error.message);
+    window.location.href = 'login.html';
+  });
+
+// Logout function
+document.getElementById('logout').addEventListener('click', () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    window.location.href = 'login.html';
+  });
+
+
+    // Redirect to profile page
+    document.getElementById('profile1').addEventListener('click', () => {
+      window.location.href = 'profile.html';
+    });
+  }
+</script>
+
+</body>
+</html>
+
+
